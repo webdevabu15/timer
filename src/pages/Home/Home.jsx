@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import sound from "../../audio/alarm.mp3";
 import { HiOutlineTrash } from "react-icons/hi";
-import { useToggle } from '@mantine/hooks';
 import "./Home.css";
 
 const Home = () => {
@@ -87,7 +86,7 @@ const Home = () => {
   const closeAlarm = (index) => {
     setAlarmArr((prevSetAlarm) => prevSetAlarm.filter((_, i) => i !== index));
   };
-
+  
 
   return (
     <div className="wrapper">
@@ -133,6 +132,7 @@ const Home = () => {
             <span>{alarm}</span>
 
             <div className="btns">
+             
             <button onClick={() => closeAlarm(index)}>
               <HiOutlineTrash/>
             </button>

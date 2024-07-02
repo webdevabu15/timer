@@ -58,6 +58,8 @@
     border: 1px solid black;
     border-radius: 50px;
     background-size: cover;
+    background-color: rgb(12, 158, 255);
+    
 }
 
 .alarm{
@@ -70,6 +72,11 @@
     padding: 30px;
     border-radius: 80px;
     margin: 0 20px;
+    
+}
+
+.alarm > h1{
+    color: #56ff47;
 }
 
 .alarm-control{
@@ -97,8 +104,8 @@
     padding: 5px 20px;
     border-radius: 10px;
     border: none;
-    background-color:rgb(255, 221, 71);
-    color: rgb(66, 18, 239);
+    background-color:rgba(43, 255, 230, 0.882);
+    color: rgb(18, 110, 239);
 }
 
 
@@ -114,9 +121,12 @@
 .card{
     display: flex;
     justify-content: space-between;
+    width: 80%;
     padding: 20px;
     height: 60px;
-
+    border-bottom: 2px solid rgb(27, 27, 199);
+    margin: auto;
+    color: rgb(86, 255, 71);
 }
 
 .card > .btns{
@@ -124,15 +134,20 @@
     gap: 20px;
 }
 
+.card > .btns > svg:first-child{
+    height: 30px;
+}
+
 .card > .btns > button{
     height: 20px;
     border: none;
-    background-color: #fff;
+    background-color: rgb(12, 158, 255);
+    animation-timing-function: linear(10s);
 }
 
 .card  > .btns  > button > svg{
     font-size: 20px;
-    color: tomato;
+    color: rgb(86, 255, 71);
 }
 
 .card:first-child{
@@ -142,6 +157,79 @@
 
 .card:last-child{
     border-radius: 0px 0px 20px 20px;
-   
+   border: none;
 }
 
+@media only screen and (max-width: 768px) {
+   .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+   }
+
+   .timer{
+    height: 200px;
+   }
+
+   .box{
+    width: 100%;
+   }
+
+   .time{   
+    font-size: 18px;
+    width: 200px;
+   }
+
+   .time-controller{
+    width: 200px;
+   }
+
+   .time-controller > button{
+      width: 25%;
+      margin: 5px;
+      text-align: center;
+      padding: 10px;
+   }
+
+   .alarm-wrapper{
+    display: flex;
+    padding: 20px;
+   }
+
+   .alarm{
+    margin: 0;
+   }
+
+   .alarm > h1{
+    font-size: 19px;
+   }
+
+   .alarm-control > input{
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+   }
+
+   .set-alarm{
+    width: 60px;
+    height: 20px;
+    font-size: 10px;
+    padding: 0;
+   }
+
+   .cards{
+    height: 200px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.card{
+    padding: 0;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    align-items: center;
+}
+}
